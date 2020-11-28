@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript exercise</title>
+    </head>
+
+    <body>
+
+        <div></div>
+
+        <script>
+            var element = document.querySelector("div");
+            var paragraph = document.createElement("p");
+            var p_content = document.createTextNode("Hello");
+
+            paragraph.appendChild(p_content);
+            paragraph.style.color="blue";
+            element.appendChild(paragraph)
+
+            var image = document.createElement("img");
+            image.src = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
+            image.setAttribute("onclick", "alert('hello')");
+            element.appendChild(image);
+
+            var pp = document.createElement("p");
+            var pp_content = document.createTextNode("hello");
+            pp.appendChild(pp_content);
+            pp.style.color="orange";
+            image.setAttribute("onmouseover", "element.appendChild(pp)");
+            element.appendChild(image);
+        </script>
+    </body>
+</html>

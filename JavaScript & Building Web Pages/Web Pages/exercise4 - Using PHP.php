@@ -14,4 +14,3 @@
         Welcome <?php echo $_POST['user']; ?>
     </body>
 </html>
-dddd

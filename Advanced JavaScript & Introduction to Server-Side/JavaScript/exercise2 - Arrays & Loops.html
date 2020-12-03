@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript exercise</title>
+    </head>
+
+    <body>
+        <script>
+            function main() {
+                var arr = [];
+                while(true) {
+                    value = prompt("ADD or REMOVE: ");
+
+                    if (value.toUpperCase() == "ADD") {
+                        populateArray(arr);
+                    } else if(value.toUpperCase() == "REMOVE") {
+                        removeArrayItems(arr);
+                    } else {
+                        alert("Wrong selection");
+                    }
+                    printArr(arr);
+                }
+            }
+
+            function populateArray(arr) {
+                value = prompt("Enter value to add: ");
+                arr.push(value);
+            }
+
+            function removeArrayItems(arr) {
+                value = prompt("Enter value to remove: ");
+                arr.remove(value);
+            }
+
+            function printArr(arr) {
+                for(item in arr) {
+                    console.log(arr[item]);
+                }
+            }
+
+            main();
+        </script>
+    </body>
+</html>

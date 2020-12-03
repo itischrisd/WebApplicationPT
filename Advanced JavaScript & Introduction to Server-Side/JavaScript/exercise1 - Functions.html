@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript exercise</title>
+    </head>
+
+    <body>
+        <script>
+            function main() {
+            var price = 0;
+            var age = prompt("Please enter your age: ");
+            var model = prompt("Enter car model: \n Chevrolet/Cadillac/Buick/Ford");
+
+            price += clientAge(age);
+
+            if(clientCar(model) > 0) {
+            price += clientCar(model);
+            } else {
+            alert("No such caar model");
+            }
+            alert("Total price is: " + price);
+            }
+
+            function clientAge(age) {
+            if(age <21 && age >= 17) {
+            return 200;
+            }
+            return 100;
+            }
+
+            function clientCar(car) {
+            if(car == "Chevrolet") {
+                return 800;
+            } else if(car == "Cadillac") {
+                return 1500;
+            } else if(car == "Buick") {
+                return 1300;
+            } else if(car == "Ford") {
+                return 700;
+            } else {
+                return -1;
+                }
+            }
+            
+            main();
+        </script>
+    </body>
+</html>
+

